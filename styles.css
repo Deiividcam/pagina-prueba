@@ -1,0 +1,637 @@
+/* Estilos generales */
+:root {
+    --primary-color: #4a6bff;
+    --secondary-color: #ff6b6b;
+    --dark-color: #2c3e50;
+    --light-color: #f8f9fa;
+    --gray-color: #6c757d;
+    --success-color: #28a745;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Botones */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+    border: 2px solid var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: transparent;
+    color: var(--primary-color);
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.btn-outline:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Header */
+header {
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    color: var(--dark-color);
+}
+
+.logo h1 span {
+    color: var(--primary-color);
+}
+
+.logo p {
+    font-size: 0.8rem;
+    color: var(--gray-color);
+    margin-top: -5px;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    font-weight: 600;
+    color: var(--dark-color);
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+.cta-header .btn {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+}
+
+/* Hero */
+.hero {
+    padding: 150px 0 80px;
+    background-color: #f5f7ff;
+}
+
+.hero .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-content {
+    flex: 1;
+    padding-right: 50px;
+}
+
+.hero-content h2 {
+    font-size: 2.5rem;
+    color: var(--dark-color);
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    color: var(--gray-color);
+    margin-bottom: 30px;
+}
+
+.hero-image {
+    flex: 1;
+}
+
+.hero-image img {
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Sección Cursos */
+.cursos {
+    padding: 80px 0;
+}
+
+.cursos h2, .beneficios h2, .testimonios h2, .contacto h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--dark-color);
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    text-align: center;
+    color: var(--gray-color);
+    margin-bottom: 50px;
+    font-size: 1.1rem;
+}
+
+.cursos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.curso-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.curso-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.curso-card.destacado {
+    border: 2px solid var(--primary-color);
+}
+
+.badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.curso-header {
+    padding: 20px;
+    background-color: #f8f9fa;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+.curso-header h3 {
+    font-size: 1.5rem;
+    color: var(--dark-color);
+}
+
+.price {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin: 10px 0;
+}
+
+.price span {
+    font-size: 1rem;
+    color: var(--gray-color);
+    font-weight: normal;
+}
+
+.curso-body {
+    padding: 20px;
+}
+
+.curso-body ul {
+    margin-bottom: 30px;
+}
+
+.curso-body ul li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.curso-body ul li i {
+    margin-right: 10px;
+    color: var(--primary-color);
+}
+
+.curso-body ul li i.fa-times {
+    color: #ccc;
+}
+
+.curso-body .btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+}
+
+/* Beneficios */
+.beneficios {
+    padding: 80px 0;
+    background-color: #f5f7ff;
+}
+
+.beneficios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.beneficio {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.beneficio:hover {
+    transform: translateY(-10px);
+}
+
+.beneficio i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.beneficio h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+/* Testimonios */
+.testimonios {
+    padding: 80px 0;
+}
+
+.testimonios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.testimonio {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.testimonio-content {
+    margin-bottom: 20px;
+    font-style: italic;
+    color: var(--gray-color);
+}
+
+.testimonio-author {
+    display: flex;
+    align-items: center;
+}
+
+.testimonio-author img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.testimonio-author p {
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.testimonio-author span {
+    font-size: 0.8rem;
+    color: var(--gray-color);
+}
+
+/* CTA */
+.cta {
+    padding: 80px 0;
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+}
+
+.cta h2 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.cta p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 30px;
+}
+
+.cta .btn-primary {
+    background-color: white;
+    color: var(--primary-color);
+    border-color: white;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+}
+
+.cta .btn-primary:hover {
+    background-color: transparent;
+    color: white;
+}
+
+/* Contacto */
+.contacto {
+    padding: 80px 0;
+}
+
+.contacto .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.contacto h2 {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.contacto p {
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.contacto-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: var(--dark-color);
+}
+
+.contacto-info ul {
+    margin-bottom: 30px;
+}
+
+.contacto-info ul li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.contacto-info ul li i {
+    margin-right: 15px;
+    color: var(--primary-color);
+    width: 20px;
+    text-align: center;
+}
+
+.social {
+    display: flex;
+    gap: 15px;
+}
+
+.social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #f5f7ff;
+    border-radius: 50%;
+    color: var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.social a:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark-color);
+    color: white;
+    padding: 60px 0 0;
+}
+
+footer .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.footer-logo h3 {
+    font-size: 1.8rem;
+    color: white;
+}
+
+.footer-logo h3 span {
+    color: var(--primary-color);
+}
+
+.footer-logo p {
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+.footer-links h4, .footer-legal h4, .footer-newsletter h4 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.footer-links ul li, .footer-legal ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a, .footer-legal ul li a {
+    color: #aaa;
+    transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover, .footer-legal ul li a:hover {
+    color: white;
+}
+
+.footer-newsletter p {
+    color: #aaa;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.footer-newsletter form {
+    display: flex;
+}
+
+.footer-newsletter input {
+    flex: 1;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    font-family: inherit;
+}
+
+.footer-newsletter button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0 15px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.footer-newsletter button:hover {
+    background-color: #3a5ae8;
+}
+
+.copyright {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #1a252f;
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .hero .container {
+        flex-direction: column;
+    }
+    
+    .hero-content {
+        padding-right: 0;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+    
+    .contacto .container {
+        grid-template-columns: 1fr;
+    }
+    
+    .contacto-info {
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+    }
+    
+    nav {
+        margin: 20px 0;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav ul li {
+        margin: 10px 0;
+    }
+    
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+    
+    .hero {
+        padding: 120px 0 60px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-content h2 {
+        font-size: 1.8rem;
+    }
+    
+    .cursos h2, .beneficios h2, .testimonios h2, .contacto h2 {
+        font-size: 1.5rem;
+    }
+    
+    .btn {
+        padding: 8px 15px;
+    }
+}
